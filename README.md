@@ -205,6 +205,7 @@ Solution in `src/components/icons/IconHalloween.vue` and used in
 
 A problem arises with the deploy at GH: 
 
-1. You have to rememberbuild each time you deploy 
+1. You have to remember `npm run` build each time you deploy 
 2. You have to add the generated files inside `docs`
 3. Better automatize in `package.json`
+  - Véase también <https://stackoverflow.com/questions/11580961/sending-command-line-arguments-to-npm-script>
