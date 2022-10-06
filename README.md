@@ -10,7 +10,34 @@ answered e.t. with No
 
 ## Exercise: Added component counter 
 
-Insert the counter component from the tutorial inside this application
+Insert the counter component from the tutorial inside this application. See code <https://vuejs.org/guide/introduction.html#api-styles>
+
+```js
+<script setup>
+import { ref, onMounted } from 'vue'
+
+// reactive state
+const count = ref(0)
+
+// functions that mutate state and trigger updates
+function increment() {
+  count.value++
+}
+
+// lifecycle hooks
+onMounted(() => {
+  console.log(`The initial count is ${count.value}.`)
+})
+</script>
+
+<template>
+  <button @click="increment">Count is: {{ count }}</button>
+</template>
+```
+
+The Composition API is centered around declaring reactive state variables directly in a function scope, and composing state from multiple functions together to handle complexity. 
+It is more free-form, and requires understanding of how reactivity works in Vue to be used effectively. 
+In return, its flexibility enables more powerful patterns for organizing and reusing logic.
 
 ## vite.config.js
 
@@ -261,3 +288,10 @@ let myApp = createApp(App)
 myApp.use(Markdown);
 myApp.mount('#app')
 ```
+
+## Exercise: Add the Options API counter as a component
+
+Here is the Options API counter code: <https://vuejs.org/guide/introduction.html#options-api>
+
+The Options API is centered around the concept of a "component instance" (`this`), which typically aligns better with a class-based mental model for users coming from OOP language backgrounds. It is also more beginner-friendly by abstracting away the reactivity details and enforcing code organization via option groups.
+

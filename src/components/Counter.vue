@@ -1,20 +1,21 @@
-<script>
-  export default {
-    data() {
-      return {
-        count: 0
-      }
-    }
+<script setup>
+  import { ref, onMounted } from 'vue'
+  
+  // reactive state
+  const count = ref(0)
+  
+  // functions that mutate state and trigger updates
+  function increment() {
+    count.value++
   }
+  
+  // lifecycle hooks
+  onMounted(() => {
+    console.log(`The initial count with the composition api is ${count.value}.`)
+  })
   </script>
   
   <template>
-    <button @click="count++">El contador vale: {{ count }}</button>
+    <button @click="increment">Count is: {{ count }}</button>
   </template>
-  
-  <style scoped>
-  button {
-    font-weight: bold;
-  }
-  </style>
   

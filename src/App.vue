@@ -2,6 +2,8 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import Counter from './components/Counter.vue'
+import CountDown from './components/OptionsAPICounter.vue'
+
 import Markdown from 'vue3-markdown-it';
 
 const SomeMarkdown = `
@@ -26,7 +28,10 @@ and here is some code:
     <div class="wrapper">
       <Markdown :source="SomeMarkdown" />
       <HelloWorld msg="¡Lo has hecho!" />
-      <Counter></Counter>
+      <table>
+        <tr><td><Counter></Counter></td></tr>
+        <tr><td><CountDown></CountDown></td></tr>
+      </table>
     </div>
   </header>
 
