@@ -8,7 +8,9 @@
 answered e.t. with No
 
 
-## Added component counter 
+## Exercise: Added component counter 
+
+Insert the counter component from the tutorial inside this application
 
 ## vite.config.js
 
@@ -193,3 +195,10 @@ Compile and Minify for Production
 ```sh
 npm run build
 ```
+
+## Exercise: Substitute an  icon for a new icon
+
+See <https://www.svgrepo.com/svg/427182/halloween-haunted-house>
+
+Solution in `src/components/icons/IconHalloween.vue` and used in 
+`src/components/TheWelcome.vue`
