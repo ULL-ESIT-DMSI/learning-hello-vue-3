@@ -13,5 +13,6 @@ export default defineConfig({
   },
   build: {
     outDir: fileURLToPath(new URL('./docs', import.meta.url))
-  }
+  },
+  base: '/learning-hello-vue-3/'
 })
