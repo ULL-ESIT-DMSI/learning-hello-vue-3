@@ -2,6 +2,20 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import Counter from './components/Counter.vue'
+import Markdown from 'vue3-markdown-it';
+
+const SomeMarkdown = `
+This is a markdown link: [Google](https://www.google.com) 
+
+and this goes in cursive: *it!* 
+
+and here comes an emoji: :satellite:
+
+and here is some code:
+
+\`some code\`
+
+`
 
 </script>
 
@@ -10,6 +24,7 @@ import Counter from './components/Counter.vue'
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
+      <Markdown :source="SomeMarkdown" />
       <HelloWorld msg="¡Lo has hecho!" />
       <Counter></Counter>
     </div>
