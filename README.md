@@ -80,6 +80,34 @@ i just want to alias the src folder and do
 
     import Component from '@/components/Component.vue'
 
+
+### base
+
+To deploy at Github I had to introduce the base property in vite.config.js
+
+```js
+import { fileURLToPath, URL } from 'node:url'
+
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
+  },
+  build: {
+    outDir: fileURLToPath(new URL('./docs', import.meta.url))
+  },
+  base: '/learning-hello-vue-3/'
+})
+```
+
+See <https://vitepress.vuejs.org/guide/asset-handling>
+
 ## package.json
 
 ### npm run preview
