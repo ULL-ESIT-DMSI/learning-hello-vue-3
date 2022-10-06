@@ -295,3 +295,11 @@ Here is the Options API counter code: <https://vuejs.org/guide/introduction.html
 
 The Options API is centered around the concept of a "component instance" (`this`), which typically aligns better with a class-based mental model for users coming from OOP language backgrounds. It is also more beginner-friendly by abstracting away the reactivity details and enforcing code organization via option groups.
 
+## Exercise: Simple Routing
+
+Add simple routing with two "pages". One as before and the other with the tutorial inside this README.md.
+
+Use pandoc to create the readme component.
+
+
+See <https://vuejs.org/guide/scaling-up/routing.html#simple-routing-from-scratch>
