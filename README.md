@@ -60,11 +60,13 @@ console.log(import.meta); // { url: "file:///home/user/my-module.js" }
 
 This function ensures the correct decodings of percent-encoded characters as well as ensuring a cross-platform valid absolute path string.
 
-### Alias @
+### resolve.alias Alias @
 
-<https://vitejs.dev/config/>
+See
 
-<https://vueschool.io/articles/vuejs-tutorials/import-aliases-in-vite/>
+* <https://vitejs.dev/config/shared-options.html#resolve-alias>
+* <https://vitejs.dev/config/>
+* <https://vueschool.io/articles/vuejs-tutorials/import-aliases-in-vite/>
 
 > Perhaps, you're moving from Vue CLI to Vite as your build tool of choice and in the process you realize that the @ alias no longer works 😱.
 > How in the world was I going to avoid such nasty looking imports as this ../../../someComponent.vue?
@@ -81,9 +83,9 @@ i just want to alias the src folder and do
     import Component from '@/components/Component.vue'
 
 
-### base
+### base (deploy at GH)
 
-To deploy at Github I had to introduce the base property in vite.config.js
+To deploy at Github I had to introduce the `base` property in `vite.config.js`
 
 ```js
 import { fileURLToPath, URL } from 'node:url'
@@ -105,8 +107,53 @@ export default defineConfig({
   base: '/learning-hello-vue-3/'
 })
 ```
+See <https://vitejs.dev/config/shared-options.html#base>
 
-See <https://vitepress.vuejs.org/guide/asset-handling>
+
+## I'm trying to set a base url for both my dev and prod environments
+
+See <https://stackoverflow.com/questions/68076527/how-to-set-vite-config-js-base-public-path>
+
+**Changes should be made in `vite.config.js`**
+
+**A)** You are looking to change the running port from `3000` to `8080`, adjust `server.port` 
+
+```
+server: {
+  port: '8080'
+}
+```
+
+**C)** Changing base path depending on dev or prod environment
+
+
+`.env` file :
+```
+// .env
+ 
+// Running locally
+APP_ENV=local
+// you change port of local/dev here to :8000
+// do not forget to adjust `server.port`
+ASSET_URL=http://localhost:3000
+ 
+// Running production build
+APP_ENV=production
+ASSET_URL=https://your-prod-asset-domain.com
+```
+
+`vite.config.js`:
+```
+const ASSET_URL = process.env.ASSET_URL || '';
+
+export default { 
+  base: `${ASSET_URL}/dist/`,
+
+  [...]
+}
+```
+
+For more information, head to the official doc at https://vitejs.dev/config/#server-options
 
 ## package.json
 
