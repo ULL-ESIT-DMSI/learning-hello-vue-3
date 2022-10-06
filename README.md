@@ -209,3 +209,55 @@ A problem arises with the deploy at GH:
 2. You have to add the generated files inside `docs`
 3. Better automatize in `package.json`
   - Véase también <https://stackoverflow.com/questions/11580961/sending-command-line-arguments-to-npm-script>
+
+  ## Exercise: Using Markdown in Vue 
+
+The solution is via <https://www.npmjs.com/package/vue3-markdown-it>
+
+Inside `App.vue`we have introduced this code:
+
+```vue
+<script setup>
+import Markdown from 'vue3-markdown-it';
+
+const SomeMarkdown = `
+This is a markdown link: [Google](https://www.google.com) 
+
+and this goes in cursive: *it!* 
+
+and here comes an emoji: :satellite:
+
+and here is some code:
+
+\`some code\`
+
+`
+</script>
+
+<template>
+  <header>
+    <div class="wrapper">
+      <Markdown :source="SomeMarkdown" />
+      <HelloWorld msg="¡Lo has hecho!" />
+      <Counter></Counter>
+    </div>
+  </header>
+  ...
+</template>
+```
+
+and I have also changed the `main.js`:
+
+```js
+import { createApp } from 'vue'
+import Markdown from 'vue3-markdown-it'
+
+import App from './App.vue'
+
+import './assets/main.css'
+
+let myApp = createApp(App)
+
+myApp.use(Markdown);
+myApp.mount('#app')
+```
