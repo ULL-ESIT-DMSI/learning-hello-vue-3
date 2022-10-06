@@ -1,7 +1,7 @@
 <script setup>
 import WelcomeItem from './WelcomeItem.vue'
 import DocumentationIcon from './icons/IconDocumentation.vue'
-import ToolingIcon from './icons/IconTooling.vue'
+// import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
@@ -25,7 +25,7 @@ import HalloweenIcon from './icons/IconHalloween.vue'
     <template #icon>
       <HalloweenIcon />
     </template>
-    <template #heading>Tooling</template>
+    <template #heading>Halloween</template>
 
     This project is served and bundled with
     <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>. The
