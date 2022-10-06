@@ -202,3 +202,9 @@ See <https://www.svgrepo.com/svg/427182/halloween-haunted-house>
 
 Solution in `src/components/icons/IconHalloween.vue` and used in 
 `src/components/TheWelcome.vue`
+
+A problem arises with the deploy at GH: 
+
+1. You have to rememberbuild each time you deploy 
+2. You have to add the generated files inside `docs`
+3. Better automatize in `package.json`
