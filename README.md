@@ -1,3 +1,26 @@
+## Table  of  Contents
+
+- [Table  of  Contents](#table--of--contents)
+- [Creating a Vue Application](#creating-a-vue-application)
+- [Exercise: Added component counter](#exercise-added-component-counter)
+- [vite.config.js](#viteconfigjs)
+  - [Imports](#imports)
+  - [import.meta](#importmeta)
+  - [fileURLToPath](#fileurltopath)
+  - [resolve.alias Alias @](#resolvealias-alias-)
+  - [base (deploy at GH)](#base-deploy-at-gh)
+- [I'm trying to set a base url for both my dev and prod environments](#im-trying-to-set-a-base-url-for-both-my-dev-and-prod-environments)
+- [package.json](#packagejson)
+  - [npm run preview](#npm-run-preview)
+- [Steps to build hello-vue-3](#steps-to-build-hello-vue-3)
+  - [Recommended IDE Setup](#recommended-ide-setup)
+  - [Customize configuration](#customize-configuration)
+- [Project Setup](#project-setup)
+- [Exercise: Substitute an  icon for a new icon](#exercise-substitute-an--icon-for-a-new-icon)
+- [Exercise: Using Markdown in Vue](#exercise-using-markdown-in-vue)
+- [Exercise: Add the Options API counter as a component](#exercise-add-the-options-api-counter-as-a-component)
+- [Exercise: Simple Routing](#exercise-simple-routing)
+  
 ## Creating a Vue Application
 
 <https://vuejs.org/guide/quick-start.html#creating-a-vue-application>
