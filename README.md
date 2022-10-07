@@ -12,7 +12,7 @@
   - [import.meta](#importmeta)
   - [fileURLToPath](#fileurltopath)
   - [resolve.alias Alias @](#resolvealias-alias-)
-  - [base (deploy at GH)](#base-deploy-at-gh)
+  - [base and build (deploy at GH)](#base-and-build-deploy-at-gh)
 - [I'm trying to set a base url for both my dev and prod environments](#im-trying-to-set-a-base-url-for-both-my-dev-and-prod-environments)
 - [Exercise: Substitute an  icon for a new icon](#exercise-substitute-an--icon-for-a-new-icon)
 - [Exercise: Using Markdown in Vue](#exercise-using-markdown-in-vue)
@@ -173,9 +173,11 @@ See also <https://stackoverflow.com/questions/66043612/vue3-vite-project-alias-s
 >    import Component from '@/components/Component.vue'
 
 
-### base (deploy at GH)
+### base and build (deploy at GH)
 
-To deploy at Github I had to introduce the `base` property in `vite.config.js`
+To deploy at Github I had to introduce the `base` property in `vite.config.js` , set the `build.outDir`property to `docs`, configuring the GH pages 
+to pull from that folder:
+
 
 ```js
 import { fileURLToPath, URL } from 'node:url'
