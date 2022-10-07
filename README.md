@@ -127,7 +127,7 @@ See
 * <https://vueschool.io/articles/vuejs-tutorials/import-aliases-in-vite/>
 
 > Perhaps, you're moving from Vue CLI to Vite as your build tool of choice and in the process you realize that the @ alias no longer works 😱.
-> How in the world was I going to avoid such nasty looking imports as this ../../../someComponent.vue?
+> How in the world was I going to avoid such nasty looking imports as this `../../../someComponent.vue`?
 
 
 See also <https://stackoverflow.com/questions/66043612/vue3-vite-project-alias-src-to-not-working>
