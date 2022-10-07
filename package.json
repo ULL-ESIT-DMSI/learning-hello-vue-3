@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "vite build && git add docs && git ci -a",
     "preview": "vite preview --port 4173",
-    "readme": "pandoc   README.md -o readme.html"
+    "readme": "pandoc README.md -o src/components/Home.vue -s --to html --template pandoc-template.html5  --metadata=title:'Learning Vue'"
   },
   "dependencies": {
     "vue": "^3.2.38",

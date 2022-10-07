@@ -1,6 +1,7 @@
 ## Table  of  Contents
 
 - [Table  of  Contents](#table--of--contents)
+- [Testing](#testing)
 - [Creating a Vue Application](#creating-a-vue-application)
   - [Recommended IDE Setup](#recommended-ide-setup)
   - [Customize configuration](#customize-configuration)
@@ -19,6 +20,8 @@
 - [Exercise: Add the Options API counter as a component](#exercise-add-the-options-api-counter-as-a-component)
 - [Exercise: Simple Routing](#exercise-simple-routing)
   
+## Testing
+
 ## Creating a Vue Application
 
 Following the tutorial at
