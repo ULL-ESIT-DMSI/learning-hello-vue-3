@@ -5,6 +5,7 @@
   - [Recommended IDE Setup](#recommended-ide-setup)
   - [Customize configuration](#customize-configuration)
   - [Project Setup](#project-setup)
+  - [npm run preview](#npm-run-preview)
 - [Exercise: Add component counter](#exercise-add-component-counter)
 - [vite.config.js](#viteconfigjs)
   - [Imports](#imports)
@@ -13,8 +14,6 @@
   - [resolve.alias Alias @](#resolvealias-alias-)
   - [base (deploy at GH)](#base-deploy-at-gh)
 - [I'm trying to set a base url for both my dev and prod environments](#im-trying-to-set-a-base-url-for-both-my-dev-and-prod-environments)
-- [package.json](#packagejson)
-  - [npm run preview](#npm-run-preview)
 - [Exercise: Substitute an  icon for a new icon](#exercise-substitute-an--icon-for-a-new-icon)
 - [Exercise: Using Markdown in Vue](#exercise-using-markdown-in-vue)
 - [Exercise: Add the Options API counter as a component](#exercise-add-the-options-api-counter-as-a-component)
@@ -58,6 +57,12 @@ Compile and Minify for Production
 ```sh
 npm run build
 ```
+### npm run preview
+
+npm run preview - this will generate a production build and run it using the built-in dev server
+
+See <https://stackoverflow.com/questions/69317858/vuejs3-vite-how-to-run-production-build>s
+
 
 ## Exercise: Add component counter 
 
@@ -239,14 +244,6 @@ export default {
 ```
 
 For more information, head to the official doc at https://vitejs.dev/config/#server-options
-
-## package.json
-
-### npm run preview
-
-npm run preview - this will generate a production build and run it using the built-in dev server
-
-see <https://stackoverflow.com/questions/69317858/vuejs3-vite-how-to-run-production-build>s
 
 
 
