@@ -2,7 +2,7 @@
 
 - [Table  of  Contents](#table--of--contents)
 - [Creating a Vue Application](#creating-a-vue-application)
-- [Exercise: Added component counter](#exercise-added-component-counter)
+- [Exercise: Add component counter](#exercise-add-component-counter)
 - [vite.config.js](#viteconfigjs)
   - [Imports](#imports)
   - [import.meta](#importmeta)
@@ -23,6 +23,7 @@
   
 ## Creating a Vue Application
 
+Following the tutorial at
 <https://vuejs.org/guide/quick-start.html#creating-a-vue-application>
 
 ```
@@ -31,11 +32,11 @@
 answered e.t. with No
 
 
-## Exercise: Added component counter 
+## Exercise: Add component counter 
 
 Insert the counter component from the tutorial inside this application. See code <https://vuejs.org/guide/introduction.html#api-styles>
 
-```js
+```html
 <script setup>
 import { ref, onMounted } from 'vue'
 
@@ -58,13 +59,18 @@ onMounted(() => {
 </template>
 ```
 
-The Composition API is centered around declaring reactive state variables directly in a function scope, and composing state from multiple functions together to handle complexity. 
-It is more free-form, and requires understanding of how reactivity works in Vue to be used effectively. 
+The Composition API is centered around 
+
+- declaring reactive state variables directly in a function scope, and 
+- composing state from multiple functions together to handle complexity. 
+  
+Requires understanding of how reactivity works in Vue to be used effectively. 
 In return, its flexibility enables more powerful patterns for organizing and reusing logic.
 
 ## vite.config.js
 
-When running vite from the command line, Vite will automatically try to resolve a config file named vite.config.js inside project root.
+When running vite from the command line, 
+Vite will automatically try to resolve a config file named `vite.config.js` inside project root.
 <https://vitejs.dev/config/>
 
 ```js
