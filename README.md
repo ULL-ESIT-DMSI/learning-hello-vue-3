@@ -132,13 +132,13 @@ See
 
 See also <https://stackoverflow.com/questions/66043612/vue3-vite-project-alias-src-to-not-working>
 
-I have installed the project with `vue3 - vite` importing a component like
-
-    import Component from '../../../../components/Component.vue'
-
-i just want to alias the src folder and do
-
-    import Component from '@/components/Component.vue'
+>I have installed the project with `vue3 - vite` importing a component like
+>
+>    import Component from '../../../../components/Component.vue'
+>
+>i just want to alias the src folder and do
+>
+>    import Component from '@/components/Component.vue'
 
 
 ### base (deploy at GH)
