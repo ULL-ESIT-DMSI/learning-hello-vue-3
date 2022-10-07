@@ -175,7 +175,7 @@ See also <https://stackoverflow.com/questions/66043612/vue3-vite-project-alias-s
 
 ### base and build (deploy at GH)
 
-To deploy at Github I had to introduce the `base` property in `vite.config.js` , set the `build.outDir`property to `docs`, configuring the GH pages 
+To deploy at Github I had to introduce the `base` property in `vite.config.js` , set the `build.outDir` property to `docs`, configuring the GH pages 
 to pull from that folder:
 
 
