@@ -2,6 +2,9 @@
 
 - [Table  of  Contents](#table--of--contents)
 - [Creating a Vue Application](#creating-a-vue-application)
+  - [Recommended IDE Setup](#recommended-ide-setup)
+  - [Customize configuration](#customize-configuration)
+  - [Project Setup](#project-setup)
 - [Exercise: Add component counter](#exercise-add-component-counter)
 - [vite.config.js](#viteconfigjs)
   - [Imports](#imports)
@@ -12,10 +15,6 @@
 - [I'm trying to set a base url for both my dev and prod environments](#im-trying-to-set-a-base-url-for-both-my-dev-and-prod-environments)
 - [package.json](#packagejson)
   - [npm run preview](#npm-run-preview)
-- [Steps to build hello-vue-3](#steps-to-build-hello-vue-3)
-  - [Recommended IDE Setup](#recommended-ide-setup)
-  - [Customize configuration](#customize-configuration)
-- [Project Setup](#project-setup)
 - [Exercise: Substitute an  icon for a new icon](#exercise-substitute-an--icon-for-a-new-icon)
 - [Exercise: Using Markdown in Vue](#exercise-using-markdown-in-vue)
 - [Exercise: Add the Options API counter as a component](#exercise-add-the-options-api-counter-as-a-component)
@@ -31,6 +30,34 @@ Following the tutorial at
 ```
 answered e.t. with No
 
+
+The resulting template should help get you started developing with Vue 3 in Vite.
+
+### Recommended IDE Setup
+
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+
+### Customize configuration
+
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+### Project Setup
+
+```sh
+npm install
+```
+
+Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+Compile and Minify for Production
+
+```sh
+npm run build
+```
 
 ## Exercise: Add component counter 
 
@@ -222,35 +249,6 @@ npm run preview - this will generate a production build and run it using the bui
 see <https://stackoverflow.com/questions/69317858/vuejs3-vite-how-to-run-production-build>s
 
 
-## Steps to build hello-vue-3
-
-This template should help get you started developing with Vue 3 in Vite.
-
-### Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-### Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-Compile and Minify for Production
-
-```sh
-npm run build
-```
 
 ## Exercise: Substitute an  icon for a new icon
 
