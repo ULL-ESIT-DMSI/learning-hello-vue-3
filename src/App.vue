@@ -10,9 +10,11 @@
   }
   
   const currentPath = ref(window.location.hash)
+  console.log("currentPath.value: " + currentPath.value)
   
   window.addEventListener('hashchange', () => {
     currentPath.value = window.location.hash
+    console.log("currentPath.value: " + currentPath.value)
   })
   
   const currentView = computed(() => {

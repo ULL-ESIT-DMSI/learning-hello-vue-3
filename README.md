@@ -303,3 +303,60 @@ Use pandoc to create the readme component.
 
 
 See <https://vuejs.org/guide/scaling-up/routing.html#simple-routing-from-scratch>
+
+Solution to this task is in branch `simple-routing`.
+
+Modified `App.vue`:
+
+```vue
+<script setup>
+  import { ref, computed } from 'vue'
+  import Home from './components/Home.vue'
+  import Demo from './components/Demo.vue'  
+  import NotFound from './components/NotFound.vue'
+  
+  const routes = {
+    '/': Home,
+    '/demo': Demo
+  }
+  
+  // The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page.
+  const currentPath = ref(window.location.hash)
+  /*
+  Refs are Vue.js instance properties that are used to register or indicate a reference to HTML elements or child elements in the template of your application. 
+  If a ref attribute is added to an HTML element in your Vue template, you'll then be able to reference that element or even a child element in your Vue instance.
+  */
+
+  window.addEventListener('hashchange', () => {
+    currentPath.value = window.location.hash // Updates the currentPath value when the url hash changes
+  })
+  
+  const currentView = computed(() => {
+    return routes[currentPath.value.slice(1) || '/'] || NotFound
+  })
+  </script>
+  
+  <template>
+    <a href="#/">Home</a> | 
+    <a href="#/demo">Demo</a>
+    <component :is="currentView" />
+  </template>
+```
+
+In this case we wanto to switch between components based on the hash in the current URL. 
+We use the `window.location.hash` to get the current hash and 
+we use the `window.addEventListener('hashchange', () => {...})` to listen to changes in the hash.
+
+The code:
+
+1. Defines a `routes` object with the component to render for each route.
+2. Defines a **reactive `currentPath` variable**, initialized with the URL current hash.
+3. Registers an event listener for `hashchange` events. 
+  - The `hashchange` event is fired when the fragment identifier of the URL has changed <https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event>
+    (the part of the URL beginning with and following the `#` symbol).
+4. Defines a computed value `currentView`, which uses the current hash to determine which component to render.
+
+The <component :is="currentView" /> in the template renders the component returned by the computed value, which is either Home or Demo, depending on the current hash. If the hash is empty, it will render Home. If the hash is #/demo, it will render Demo. If the hash is #/foo, it will render NotFound. -->
+
+<https://vuejs.org/guide/essentials/component-basics.html#dynamic-components>
+
