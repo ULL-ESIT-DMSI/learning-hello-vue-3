@@ -14,5 +14,8 @@ export default defineConfig({
   build: {
     outDir: fileURLToPath(new URL('./docs', import.meta.url))
   },
-  base: '/learning-hello-vue-3/'
+  base: '/learning-hello-vue-3/',
+  server: {
+    port: 2001
+  }
 })
